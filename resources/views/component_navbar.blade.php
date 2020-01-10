@@ -7,30 +7,16 @@
 
   <div class="collapse navbar-collapse" id="navbar">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(página atual)</span></a>
+      <li @if($current=="home")class="nav-item active" @else class="nav-item" @endif>
+        <a class="nav-link" href="/">Home</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+        <li @if($current=="produtos")class="nav-item active" @else class="nav-item" @endif>
+        <a class="nav-link" href="/produtos">Produtos</a>
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Ação</a>
-          <a class="dropdown-item" href="#">Outra ação</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Algo mais aqui</a>
-        </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Desativado</a>
+      <li @if($current=="categorias")class="nav-item active" @else class="nav-item" @endif>
+        <a class="nav-link" href="/categorias">Categorias</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-    </form>
   </div>
 </nav>
