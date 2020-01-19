@@ -1,4 +1,4 @@
-@extends('layouts.app', ["current"=>"produtos"])
+@extends('layout.app', ["current"=>"produtos"])
 
 
 @section('body')

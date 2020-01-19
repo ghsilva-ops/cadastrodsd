@@ -1,4 +1,4 @@
-@extends('layouts.app',["current" =>"categorias"])
+@extends('layout.app',["current" =>"categorias"])
 
 
 @section('body')
